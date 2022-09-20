@@ -1,0 +1,103 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery task 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="task1.js"></script>
+
+</head>
+<body>
+    <table border="0" cellpadding="3" cellspacing="0">
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <input type="password" id="txtPassword" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Confirm Password:
+            </td>
+            <td>
+                <input type="password" id="txtConfirmPassword" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <div id="show-error"></div>
+            <td>
+                <input type="button" id="btnSubmit" value="Submit" />
+            </td>
+        </tr>
+    </table>
+    
+</body>
+<script>
+    $(document).ready(function(){
+        $("btnSubmit").click(function(){
+            var user = $('#txtPassword').val();
+           
+
+        });
+    });
+    $(document).ready(function(){
+        $("btnSubmit").click(function(){
+            var user = $('#txtConfirmPassword').val();
+            if(user =""){
+                $('#show-error').html('password did not match!');
+                $('#show-error').css('color','red');
+                return false;
+            }
+            if((user.length<=2)||(user.length>=26)){
+                $('#show-error').html('password did not match!');
+                $('#show-error').css('color','red');
+                return false;
+
+            }
+
+        });
+    });
+</script>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="task1.js"></script>
+  </head>
+  <body>
+    <center>
+      <h1>Task 1</h1>
+      <h2>
+        Validate the confirm password field on every character entered by the
+        user.
+      </h2>
+      <hr />
+    </center>
+
+    <div>
+      Password : <br />
+      <input type="text" id="password" value='hi'/>
+    </div>
+    <div>
+      Confirm Password : <br />
+      <input type="text" id="confirmPassword" />
+    </div>
+    <br />
+    <input type="button" value="Submit" />
+    <p id="output"></p>
+  </body>
+  
+  
+</html>
